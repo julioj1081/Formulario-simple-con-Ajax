@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Creacion de primer ajax</title>
+  <script src="js/jquery.js"></script>
+</head>
+<body>
+  <h2>Formulario de ingreso de datos usando ajax</h2>
+  <form id="formulario" method="POST">
+    <label>nombre</label>
+    <p></p>
+    <input type="text" name="nombre" id="nombre">
+    <p></p>
+    <label>apellidos</label>
+    <p></p>
+    <input type="text" name="apellidos" id="apellidos">
+    <p></p>
+    <label>usuario</label>
+    <p></p>
+    <input type="text" name="usuario" id="usuario">
+    <p></p>
+    <label>password</label>
+    <p></p>
+    <input type="text" name="password" id="password">
+    <p></p>
+    <button type="button" id="bntguardar">Guardar usuario</button>
+  </form>
+</body>
+</html>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#bntguardar").click(function(){
+      var datos = $("#formulario").serialize();
+      /*para comprobar
+      alert(datos);
+      return false;
+      */
+        $.ajax({
+          type: "POST",
+          url: "php/insertar.php",
+          data: datos,
+          success:function(r){
+              if(r==1){
+                alert("Se a agregado con exito");
+              }else{
+                alert("Fallo el server");
+              }
+          }
+        });
+        return false;
+    })
+  })
+</script>
