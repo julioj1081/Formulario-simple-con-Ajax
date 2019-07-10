@@ -1,0 +1,75 @@
+ubicar la carpeta y usar en la terminal cd "nombre del proyecto"
+
+iniciar o comenzar con git usando git init
+
+agregar archivos a git con git add "nombre del archivo"
+o si queremos agregar todos los archivos escribimos git add .
+
+con git status podemos ver que archivos nos faltan por agregar
+
+con git commit no podemos logearnos si no lo estamos 
+y nos saldra algo parecido a esto
+****Please tell me whoe you are
+
+Run
+
+escribimos lo siguiente 
+git config --global user.mail "julioj1081@hotmail.com"
+git config --global user.name "Alberto"
+
+volvemos a dar git status
+
+ahora haremos un captura al codigo como una bandera para poder retroceder
+en el tiempo digamos que es la version 1
+
+escribimos git log
+y nos saldra un pestaña esterna ahy presionaremos    i
+y despues escrribiremos el mensaje que va tener ese punto de guardado
+despues presionamos esc
+y nos mandara a la pestaña de abajo y escribiremos :wq o qw
+
+
+una ves hecho esto escribiremos git log
+y estara bien si nos aparecen una letras amarillas con el autor y la fecha en que se realizo
+
+tambien podemos escribir un mensaje con
+git commit -m "MENSAJE QUE QUIERES QUE TENGA"
+
+-----------------------------------------------------------------------------------
+IGNORAR CIERTOS ARCHIVOS 
+-----------------------------------------------------------------------------------
+si queremos descartar algunos archivos que ignore git 
+crearemos una archivo con el nombre .gitignore
+y aqui escribiremos la carpeta o archivos a ignorar
+por ejemplo text.txt o login.html
+
+
+
+
+----------------------------------------------------------------------------------------
+CREAR VERSIONES ALTERNATIVA DE TU PROGRAMA
+.......................................................................................-
+Podemos crear versiones alternativas usando 
+git branch "nombre alternativo"
+y seleccionarlo con
+git checkout nombre alternativo
+
+
+****************************************************************************
+SUBIR PROYECTO A GITHUB
+****************************************************************************
+para eso necesitamos entrar al github y mi username es julioj1081
+correo y password igual que hotmail
+despues tenemos que ir a la pestaña de crear nuevo repositorio
+poner un nombre al proyecto y una descripcion
+y darle en crear y nos saldra algo parecido a esto
+
+…or create a new repository on the command line
+echo "# Formulario-simple-con-Ajax" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+**** git remote add origin https://github.com/julioj1081/Formulario-simple-con-Ajax.git
+**** git push -u origin master
+
+nosotros copiaremos y pegaremos estos 2 el la consola
